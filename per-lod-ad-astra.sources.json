@@ -1,0 +1,7 @@
+[
+  {
+    "naam": "IISG Kennisgraaf - Organisaties",
+    "query": "iisg-organizations.rq",
+    "endpoint": "https://api.druid.datalegend.net/datasets/IISG/iisg-kg/services/iisg-kg/sparql"
+  }
+]
