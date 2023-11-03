@@ -1,0 +1,15 @@
+#+ summary: Returns books on things in Gouda available via the IISG Archives
+#+ endpoint: https://druid.datalegend.net/IISG/iisg-kg/sparql/iisg-kg
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix dc: <http://purl.org/dc/elements/1.1/>
+prefix sdo: <https://schema.org/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT {
+  [] sdo:about ?sub; sdo:name ?titel .
+} {
+  ?sub sdo:name ?titel ;
+       rdf:type sdo:Book .
+  FILTER(CONTAINS(lcase(?titel), lcase("Gouda")))
+} LIMIT 500
