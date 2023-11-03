@@ -60,3 +60,5 @@ $ curl https://api.rkd.triply.cc/datasets/rkd/RKD-Knowledge-Graph/sparql --data 
 
 ## Literuurmuseum
 
+## Nationaal Archief
+https://service.archief.nl/sparql
