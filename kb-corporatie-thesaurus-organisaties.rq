@@ -1,0 +1,22 @@
+#+ summary: Returns books on things in Gouda available via the IISG Archives
+#+ endpoint: https://druid.datalegend.net/IISG/iisg-kg/sparql/iisg-kg
+
+PREFIX sdo: <https://schema.org/>
+PREFIX schema: <http://schema.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT {
+  [] sdo:about ?company; sdo:name ?name .
+} {
+SERVICE <http://data.bibliotheken.nl/sparql> {
+  SELECT ?company ?name WHERE {
+      ?company rdf:type schema:Organization .
+      ?company ?p ?s .
+      ?s <http://schema.org/addressLocality> ?locality .
+       FILTER(CONTAINS(STR(?locality), "Gouda"))
+      OPTIONAL{?company schema:name ?name}  
+    }
+    LIMIT 300
+	}
+}
