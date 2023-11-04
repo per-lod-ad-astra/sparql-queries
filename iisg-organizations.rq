@@ -11,5 +11,5 @@ CONSTRUCT {
 } {
   ?sub sdo:name ?name ;
        rdf:type sdo:Organization .
-  FILTER(CONTAINS(LCASE(?titel), lcase(?zoekopdracht)))
+  FILTER(CONTAINS(lcase(?name), lcase(?zoekopdracht)))
 }
