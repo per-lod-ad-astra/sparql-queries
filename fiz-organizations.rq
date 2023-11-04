@@ -1,0 +1,13 @@
+#+ summary: 
+#+ endpoint: https://nfdi.fiz-karlsruhe.de/sparql
+
+PREFIX schema: <http://schema.org/>
+PREFIX sdo: <https://schema.org/>
+
+CONSTRUCT {
+  [] sdo:about ?sub; sdo:name ?name .
+} {
+  ?sub a <https://nfdi.fiz-karlsruhe.de/ontology/Organization> ;
+  	schema:name ?name .
+  FILTER(contains(lcase(str(?name)), lcase(?zoekopdracht)))
+} 
