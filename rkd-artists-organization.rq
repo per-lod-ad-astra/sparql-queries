@@ -12,5 +12,5 @@ CONSTRUCT {
   ?sub a crm:E74_Group ;
   	rdfs:label ?name .
   FILTER(contains(?name, "Gouda"))
-  FILTER(contains(STR(?name), ?zoekopdracht))
+  FILTER(contains(?name, ?zoekopdracht))
 }
