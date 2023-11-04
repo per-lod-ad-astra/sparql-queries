@@ -11,5 +11,5 @@ CONSTRUCT {
 } {
   ?sub sdo:name ?titel ;
        rdf:type sdo:Organization .
- FILTER(CONTAINS(STR(?titel), ?zoekopdracht))
-} LIMIT 200
+ FILTER(CONTAINS(lcase(STR(?titel)), lcase(?zoekopdracht)))
+}
