@@ -25,6 +25,11 @@
     "endpoint": "https://api.collectiedata.hetnieuweinstituut.nl/datasets/the-other-interface/knowledge-graph/services/knowledge-graph/sparql" 
   },
   {
+    "naam": "NA - Organisaties",
+    "query": "na-organizations.rq",
+    "endpoint": "https://service.archief.nl/sparql" 
+  },
+  {
     "naam": "SAMH - Archieven",
     "query": "samh-archives.rq",
     "endpoint": "https://fuseki.coret.org/samh-ric/query" 
