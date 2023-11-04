@@ -10,4 +10,4 @@ CONSTRUCT {
   ?sub a <https://nfdi.fiz-karlsruhe.de/ontology/Organization> ;
   	schema:name ?name .
   FILTER(contains(lcase(str(?name)), lcase(?zoekopdracht)))
-} 
+} ORDER BY ?name
