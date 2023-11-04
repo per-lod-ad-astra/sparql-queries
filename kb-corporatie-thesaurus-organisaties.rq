@@ -12,10 +12,11 @@ CONSTRUCT {
 SERVICE <http://data.bibliotheken.nl/sparql> {
   SELECT ?company ?name WHERE {
       ?company rdf:type schema:Organization .
+      ?company schema:name ?name .
       ?company ?p ?s .
       ?s <http://schema.org/addressLocality> ?locality .
-       FILTER(CONTAINS(STR(?locality), ?zoekopdracht))
-      OPTIONAL{?company schema:name ?name}  
+      FILTER(CONTAINS(STR(?locality), "Gouda"))
+      FILTER(CONTAINS(STR(?name), ?zoekopdracht))
     }
     LIMIT 300
 	}
