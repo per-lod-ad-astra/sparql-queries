@@ -15,9 +15,8 @@ SERVICE <http://data.bibliotheken.nl/sparql> {
       ?company schema:name ?name .
       ?company ?p ?s .
       ?s <http://schema.org/addressLocality> ?locality .
-      FILTER(CONTAINS(STR(?locality), "Gouda"))
-      FILTER(CONTAINS(STR(?name), ?zoekopdracht))
+      FILTER(CONTAINS(lcase(STR(?locality)), "gouda"))
+      FILTER(CONTAINS(lcase(STR(?name)), lcase(?zoekopdracht)))
     }
-    LIMIT 300
 	}
 }
