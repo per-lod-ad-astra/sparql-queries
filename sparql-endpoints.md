@@ -20,6 +20,7 @@ curl https://druid.datalegend.net/_api/datasets/IISG/iisg-kg/services/iisg-kg/sp
 ```
 
 ## KB
+Richard gedaan.
 
 
 ## NIBG
@@ -58,7 +59,22 @@ Wrong url registered as SPARQL endpoint, but it works in the end!!
 $ curl https://api.rkd.triply.cc/datasets/rkd/RKD-Knowledge-Graph/sparql --data query=SELECT%20%3Ftype%20%28count%28%3Ftype%29%20as%20%3FtypeCnt%29%20WHERE%20%7B%0A%20%20%3Fsub%20a%20%3Ftype%20.%0A%7D%20 -X POST
 ```
 
+Could be improved (for our purpose) if the location of an agent was added.
+
 ## Literuurmuseum
+``` bash
+curl https://LIT.hosting.deventit.net/AtlantisSparql --data query=SELECT%20%3Ftype%20%28count%28%3Ftype%29%20as%20%3FtypeCnt%29%20WHERE%20%7B%0A%20%20%3Fsub%20a%20%3Ftype%20.%0A%7D%20 -X POST
+```
+Times out.
 
 ## Nationaal Archief
-https://service.archief.nl/sparql
+``` bash
+$ curl https://service.archief.nl/sparql --data query=SELECT%20%3Ftype%20%28count%28%3Ftype%29%20as%20%3FtypeCnt%29%20WHERE%20%7B%0A%20%20%3Fsub%20a%20%3Ftype%20.%0A%7D%20 -X POST
+```
+
+Caps the result to a maximum of 25 results. Times out at 10 sec.
+
+## Muziekweb
+https://api.data.muziekweb.nl/datasets/MuziekwebOrganization/Muziekweb/services/Muziekweb/sparql
+
+Works, but has no way of finding Gouda's schema:MusicGroup's.

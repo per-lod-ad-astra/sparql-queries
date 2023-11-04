@@ -1,0 +1,9 @@
+#+ summary: 
+#+ endpoint: https://service.archief.nl/sparql
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT * WHERE {
+  ?sub a <https://archief.nl/def/ontologie/Agent> ;
+  	rdfs:label ?org .
+  FILTER(contains(?org, "Gouda"))
+} 
