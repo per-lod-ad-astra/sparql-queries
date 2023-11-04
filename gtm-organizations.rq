@@ -9,7 +9,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 CONSTRUCT {
   [] sdo:about ?sub; sdo:name ?titel .
 } {
-  ?sub sdo:name ?titel ;
-       rdf:type sdo:Organization .
- FILTER(CONTAINS(lcase(STR(?titel)), lcase(?zoekopdracht)))
+  ?sub rdf:type sdo:Organization .
+  { ?sub sdo:name ?titel . } UNION { ?sub sdo:alternateName ?titel . }
+  FILTER(CONTAINS(lcase(STR(?titel)), lcase(?zoekopdracht)))
 }
