@@ -30,11 +30,6 @@
     "endpoint": "https://service.archief.nl/sparql" 
   },
   {
-    "naam": "FIZ - Organisaties",
-    "query": "fiz-organizations.rq",
-    "endpoint": "https://nfdi.fiz-karlsruhe.de/sparql" 
-  },
-  {
     "naam": "SAMH - Archieven",
     "query": "samh-archives.rq",
     "endpoint": "https://fuseki.coret.org/samh-ric/query" 
