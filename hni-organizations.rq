@@ -2,8 +2,11 @@
 #+ endpoint: https://api.collectiedata.hetnieuweinstituut.nl/datasets/the-other-interface/knowledge-graph/services/knowledge-graph/sparql
 
 PREFIX sdo: <https://schema.org/>
-SELECT ?sub WHERE {
+
+CONSTRUCT {
+  [] sdo:about ?sub; sdo:name ?name .
+} {
   ?sub a sdo:Organization ;
   	sdo:name ?name .
-  FILTER(contains(?name, "Gouda"))
+  FILTER(contains(?name, ?zoekopdracht))
 } 

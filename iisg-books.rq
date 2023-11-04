@@ -11,5 +11,5 @@ CONSTRUCT {
 } {
   ?sub sdo:name ?titel ;
        rdf:type sdo:Book .
-  FILTER(CONTAINS(lcase(?titel), lcase("Gouda")))
+  FILTER(CONTAINS(lcase(?titel), lcase(?zoekopdracht)))
 } LIMIT 500
