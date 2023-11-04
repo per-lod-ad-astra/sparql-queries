@@ -13,5 +13,10 @@
     "naam": "KB Corporatiethesaurus - Organisaties",
     "query": "kb-corporatie-thesaurus-organisaties.rq",
     "endpoint": "https://api.druid.datalegend.net/datasets/IISG/iisg-kg/services/iisg-kg/sparql"
+  },
+  {
+    "naam": "Gouda Tijdmachine - Organisaties",
+    "query": "gtm-organizations.rq",
+    "endpoint": "https://www.goudatijdmachine.nl/sparql/repositories/gtm"
   }
 ]
