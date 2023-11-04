@@ -8,5 +8,5 @@ CONSTRUCT {
 } {
   ?sub a <https://archief.nl/def/ontologie/Agent> ;
   	rdfs:label ?name .
-  FILTER(contains(?name, ?zoekopdracht))
+  FILTER(contains(lcase(?name), lcase(?zoekopdracht)))
 } 
