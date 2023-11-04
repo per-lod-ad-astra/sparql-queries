@@ -12,5 +12,5 @@ CONSTRUCT {
   ?sub a crm:E74_Group ;
   	rdfs:label ?name .
   FILTER(contains(lcase(?name), "gouda"))
-  FILTER(contains(lcase(?name), lcase(?zoekopdracht))
+  FILTER(contains(lcase(?name), lcase(?zoekopdracht)))
 }
