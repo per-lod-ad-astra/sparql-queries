@@ -1,0 +1,14 @@
+#+ summary: 
+#+ endpoint: https://fuseki.coret.org/samh-ric/query
+
+PREFIX sdo: <https://schema.org/>
+PREFIX rico: <https://www.ica.org/standards/RiC/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+CONSTRUCT {
+  [] sdo:about ?sub; sdo:name ?title .
+} {  ?sub a rico:RecordSet ;
+  	rico:hasRecordSetType <https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#Fonds> ;
+	rico:hasOrHadTitle/rico:textualValue ?title .
+    FILTER(contains(lcase(?title), lcase(?zoekopdracht)))  
+}

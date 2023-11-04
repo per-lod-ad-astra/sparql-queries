@@ -9,7 +9,7 @@ https://www.goudatijdmachine.nl/sparql/repositories/gtm
 
 ## Bob's hobby endpoint
 ``` bash
-curl https://fuseki.coret.org/#/dataset/samh-ric/query --data query=SELECT%20%3Ftype%20%28count%28%3Ftype%29%20as%20%3FtypeCnt%29%20WHERE%20%7B%0A%20%20%3Fsub%20a%20%3Ftype%20.%0A%7D%20 -X POST
+curl https://fuseki.coret.org/samh-ric/query --data query=SELECT%20%3Ftype%20%28count%28%3Ftype%29%20as%20%3FtypeCnt%29%20WHERE%20%7B%0A%20%20%3Fsub%20a%20%3Ftype%20.%0A%7D%20 -X POST
 ```
 
 ## IISG

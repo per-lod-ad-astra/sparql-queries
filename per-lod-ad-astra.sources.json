@@ -30,6 +30,11 @@
     "endpoint": "https://service.archief.nl/sparql" 
   },
   {
+    "naam": "SAMH - Archieven",
+    "query": "samh-archives.rq",
+    "endpoint": "https://fuseki.coret.org/samh-ric/query" 
+  },
+  {
     "naam": "Gouda Tijdmachine - Organisaties",
     "query": "gtm-organizations.rq",
     "endpoint": "https://www.goudatijdmachine.nl/sparql/repositories/gtm"
