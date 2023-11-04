@@ -15,6 +15,11 @@
     "endpoint": "https://api.druid.datalegend.net/datasets/IISG/iisg-kg/services/iisg-kg/sparql"
   },
   {
+    "naam": "RKD Artist - Organisaties",
+    "query": "rkd-artists-organization.rq",
+    "endpoint": "https://api.rkd.triply.cc/datasets/rkd/RKD-Knowledge-Graph/services/SPARQL/sparql" 
+  },
+  {
     "naam": "Gouda Tijdmachine - Organisaties",
     "query": "gtm-organizations.rq",
     "endpoint": "https://www.goudatijdmachine.nl/sparql/repositories/gtm"
