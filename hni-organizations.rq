@@ -8,5 +8,6 @@ CONSTRUCT {
 } {
   ?sub a sdo:Organization ;
   	sdo:name ?name .
-  FILTER(contains(?name, ?zoekopdracht))
+    FILTER(contains(lcase(str(?name)), "gouda"))
+    FILTER(contains(lcase(str(?name)), lcase(?zoekopdracht)))
 } 
