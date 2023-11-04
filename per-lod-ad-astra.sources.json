@@ -21,7 +21,7 @@
   },
   {
     "naam": "HNI - Organisaties",
-    "query": "hni-organization.rq",
+    "query": "hni-organizations.rq",
     "endpoint": "https://api.collectiedata.hetnieuweinstituut.nl/datasets/the-other-interface/knowledge-graph/services/knowledge-graph/sparql" 
   },
   {
