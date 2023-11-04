@@ -10,7 +10,8 @@ CONSTRUCT {
   [] sdo:about ?sub; sdo:name ?name .
 } {
   ?sub a crm:E74_Group ;
-  	rdfs:label ?name .
+  	rdfs:label ?name ;
+  	rdfs:label ?name2 .
   FILTER(contains(lcase(?name), "gouda"))
-  FILTER(contains(lcase(?name), lcase(?zoekopdracht)))
+  FILTER(contains(lcase(?name2), lcase(?zoekopdracht)))
 }
