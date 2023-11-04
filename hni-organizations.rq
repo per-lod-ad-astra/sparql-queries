@@ -8,5 +8,5 @@ CONSTRUCT {
 } {
   ?sub a sdo:Organization ;
   	sdo:name ?name .
-  FILTER(contains(?name, "Gouda"))
+  FILTER(contains(?name, ?zoekopdracht))
 } 
